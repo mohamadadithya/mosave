@@ -5,9 +5,12 @@ MOSAVE is a web-based open-source savings application that has useful features s
 
 * Make sure you have turned on Apache2 and MySQL
 * Clone this repository to your local computer/server
+* Rename the env file to .env
 * Create new database with name mosave (can be changed in .env)
 * Type this command in cli to migrations database: php spark migrate -all
 * Type this command in cli to turn on local development server: php spark serve
+
+If you get an error from the database, change the database.default.hostname in the env file from 127.0.0.1 to localhost
 
 ## Server Requirements
 
