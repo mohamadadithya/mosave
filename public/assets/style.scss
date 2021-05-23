@@ -1,0 +1,62 @@
+@mixin box-shadow {
+    box-shadow: rgba($color: #000000, $alpha: 0.25) 0px 2px 5px -1px,
+        rgba($color: #000000, $alpha: 0.3) 0px 1px 3px -1px;
+}
+
+body {
+    padding-top: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    @include box-shadow();
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    #btn-lock {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+#card-info {
+    .card {
+        border-radius: 3em;
+        box-shadow: rgba($color: #000000, $alpha: 0.25) 0px 2px 5px -1px,
+            rgba($color: #000000, $alpha: 0.3) 0px 1px 3px -1px;
+
+        .btn-option {
+            position: absolute;
+            right: 0.5em;
+            bottom: 0.5em;
+        }
+    }
+}
+
+#targets,
+#history {
+    .card {
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.020);
+            cursor: pointer
+        }
+    }
+}
+
+.card {
+    @include box-shadow();
+    border-radius: 1em;
+}

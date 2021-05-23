@@ -1,0 +1,60 @@
+body {
+  padding-top: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar #btn-lock:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#card-info .card {
+  border-radius: 3em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#card-info .card .btn-option {
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.5em;
+}
+
+#targets .card,
+#history .card {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#targets .card:hover,
+#history .card:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.card {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */
