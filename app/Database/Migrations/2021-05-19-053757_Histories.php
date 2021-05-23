@@ -27,6 +27,12 @@ class Histories extends Migration
 			],
 			'time' => [
 				'type' => 'TIMESTAMP'
+			],
+			'created_at' => [
+				'type' => 'DATE'
+			],
+			'updated_at' => [
+				'type' => 'DATE'
 			]
 		]);
 		$this->forge->addKey('id', true);
