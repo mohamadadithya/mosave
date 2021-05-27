@@ -1,9 +1,16 @@
 # What is MOSAVE?
-MOSAVE is a web-based open-source savings application that has useful features such as creating a savings target and keeping track of after saving.
+MOSAVE is a web-based open-source personal savings application that has useful features such as creating a savings target and keeping track of after saving.
 
 ![Mosave welcome page](https://ik.imagekit.io/bcdeh9gg1p3/Welcome_to_MoSave_E0E-2N0RY.png)
 
-## Installation
+## Features
+* Authentication
+* User Setting
+* Make Target/Goal
+* Save Money
+* Saving History
+
+## Installation on Local
 
 * Make sure you have turned on Apache2 and MySQL
 * Clone this repository to your local computer/server
