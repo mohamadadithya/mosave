@@ -19,7 +19,7 @@ MOSAVE is a web-based open-source personal savings application that has useful f
 * Type this command in cli to migrations database: php spark migrate -all
 * Type this command in cli to turn on local development server: php spark serve
 
-If you get an error from the database, change the database.default.hostname in the env file from 127.0.0.1 to localhost
+If you get an error from the database, change the database.default.hostname in the **env** file from 127.0.0.1 to localhost
 
 ## Server Requirements
 
