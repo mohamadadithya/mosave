@@ -4,7 +4,7 @@
 <section id="make-target">
     <div class="container mb-5">
         <h2 class="fw-bolder mb-4">Make Target</h2>
-        <form action="<?= base_url('/target/save_target'); ?>" method="POST">
+        <form action="<?= base_url('/target/save_target'); ?>" method="POST" onsubmit="unmaskedNominalInput()">
             <?= csrf_field(); ?>
             <div class="row">
                 <div class="col-md-6">
@@ -45,4 +45,22 @@
     </div>
 </section>
 <!-- End of Make Target -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.7/imask.min.js" integrity="sha512-qCt/OTd55ilhuXLRNAp/G8uONXUrpFoDWsXDtyjV4wMbvh46dOEjvHZyWkvnffc6I2g/WHSKsaFUCm0RISxnzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let nominalInput = document.getElementById('nominal');
+    let maskNominalInput = IMask(nominalInput, {
+        mask: 'Rp num',
+        blocks: {
+            num: {
+                mask: Number,
+                thousandsSeparator: ','
+            }
+        }
+    });
+
+    function unmaskedNominalInput() {
+        let result = nominalInput.value = maskNominalInput.unmaskedValue;
+        return result;
+    }
+</script>
 <?= $this->endSection(); ?>
