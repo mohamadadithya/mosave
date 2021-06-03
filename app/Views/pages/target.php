@@ -31,10 +31,10 @@
                 <input type="hidden" name="target_id" value="<?= $target['target_id']; ?>">
                 <button type="submit" class="btn btn-success me-2"><i class="bi bi-box-arrow-in-down"></i> Save Money</button>
             </form>
-            <form action="<?= base_url('/targets/' . $target['target_id']); ?>" method="POST" class="d-inline">
+            <form action="<?= base_url('/targets/' . $target['target_id']); ?>" method="POST" class="d-inline" id="form-delete">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Delete</button>
+                <button type="button" class="btn btn-danger" onclick="deleteTargetAlert()"><i class="bi bi-trash"></i> Delete</button>
             </form>
         </div>
         <?php if ($settings) : ?>
@@ -79,5 +79,22 @@
             )
         <?php endif; ?>
     });
+
+    function deleteTargetAlert() {
+        const formDelete = document.getElementById('form-delete');
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                formDelete.submit();
+            }
+        })
+    }
 </script>
 <?= $this->endSection(); ?>
