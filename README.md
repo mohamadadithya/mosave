@@ -18,6 +18,7 @@ MOSAVE is a web-based open-source personal savings application that has useful f
 * Clone this repository to your local computer/server
 * Rename the env file to .env
 * Create new database with name mosave (can be changed in .env)
+* Type this command in cli to install required dependencies: composer install (Note: You must install Composer first)
 * Type this command in cli to migrations database: php spark migrate -all
 * Type this command in cli to turn on local development server: php spark serve
 
