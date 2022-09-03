@@ -36,7 +36,7 @@ class Histories extends Migration
 			]
 		]);
 		$this->forge->addKey('id', true);
-		$this->forge->createTable('history');
+		$this->forge->createTable('histories');
 	}
 
 	public function down()
